@@ -65,22 +65,6 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
-" search starts as soon as you start typing
-set incsearch
-
-" map / configures haya14busa/incsearch.vim commands
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-set hlsearch
-let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
-
 " indent with spaces
 set expandtab
 
@@ -105,27 +89,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Enables elm-format on save
-let g:elm_format_autosave = 1
-
-" fzf's search for files
-nmap <C-p> :FZF<CR>
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
-
-" Only lint on file open/save
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 1
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-\  'elm': 'elm-format',
-\  'ruby': 'rubocop',
-\  'javascript': 'eslint',
-\}
-let g:ale_linters = {
-\  'elm': 'elm_ls'
-\}
-nmap <silent> <C-Up> <Plug>(ale_previous_wrap)
-nmap <silent> <C-Down> <Plug>(ale_next_wrap)
 
 " store temporary files somewhere else
 set dir=$HOME/.vim/tmp/swap
@@ -135,18 +98,21 @@ if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 set ignorecase
 set smartcase
 
-" fixing default theme faulty ale warning highlights
-highlight ALEWarning ctermbg=Red ctermfg=White
-
-" Rainbow parenthesis
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
-
-" SplitJoin config
-let splitjoin_ruby_curly_braces = 0 " we don't need all those pesky curly braces when split/joining function hashes
-let splitjoin_ruby_hanging_args = 0 " we also don't want to align with the functions' opening parens
-
 " Re-drawing with C-D
 nmap <C-D> :redraw!<CR>
 
-" Easytags working asychronously to avoid foreground hanging
-let g:easytags_async = 1
+" Load plugin-specific configurations
+let config_files_root = expand('~/.config/nvim/plugins/')
+let config_files_list = [
+  \ 'ale',
+  \ 'elm-vim',
+  \ 'vim-easytags',
+  \ 'fzf',
+  \ 'incsearch',
+  \ 'rainbow',
+  \ 'splitjoin',
+  \ ]
+
+for f in config_files_list
+  execute 'source ' . config_files_root . f . '.vim'
+endfor
