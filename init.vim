@@ -26,8 +26,6 @@ Plug 'luochen1990/rainbow'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim', { 'depends': 'fzf' }
 Plug 'haya14busa/incsearch.vim'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
 " - misc
 Plug 'danro/rename.vim'
 Plug 'scrooloose/nerdtree'
@@ -106,7 +104,6 @@ let config_files_root = expand('~/.config/nvim/plugins/')
 let config_files_list = [
   \ 'ale',
   \ 'elm-vim',
-  \ 'vim-easytags',
   \ 'fzf',
   \ 'incsearch',
   \ 'rainbow',
