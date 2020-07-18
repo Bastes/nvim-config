@@ -104,6 +104,7 @@ let config_files_list = [
   \ 'ale',
   \ 'elm-vim',
   \ 'fzf',
+  \ 'vim-gitgutter',
   \ 'incsearch',
   \ 'rainbow',
   \ 'splitjoin',
