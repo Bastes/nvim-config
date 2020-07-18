@@ -42,7 +42,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'yggdroot/indentline'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-sleuth'
-Plug 'roxma/vim-paste-easy'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 
