@@ -26,6 +26,8 @@ Plug 'luochen1990/rainbow'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim', { 'depends': 'fzf' }
 Plug 'haya14busa/incsearch.vim'
+" - theme(s)
+Plug 'morhetz/gruvbox'
 " - misc
 Plug 'danro/rename.vim'
 Plug 'scrooloose/nerdtree'
@@ -109,6 +111,7 @@ let config_files_list = [
   \ 'ale',
   \ 'elm-vim',
   \ 'fzf',
+  \ 'gruvbox',
   \ 'vim-gitgutter',
   \ 'incsearch',
   \ 'rainbow',
