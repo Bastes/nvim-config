@@ -45,6 +45,7 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-sleuth'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'jeetsukumaran/vim-buffergator'
+Plug 'liuchengxu/vim-which-key'
 
 call plug#end()
 
@@ -68,6 +69,9 @@ set expandtab
 
 " display hidden chars
 set list
+
+" space makes for a better leader key
+let mapleader = " "
 
 " folds using the syntax specifics
 set foldmethod=syntax
@@ -109,6 +113,7 @@ let config_files_list = [
   \ 'incsearch',
   \ 'rainbow',
   \ 'splitjoin',
+  \ 'vim-which-key',
   \ ]
 
 for f in config_files_list
