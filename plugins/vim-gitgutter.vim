@@ -1,1 +1,2 @@
-let g:gitgutter_async = 0
+" auto-refresh markers after save
+autocmd BufWritePost * GitGutter
