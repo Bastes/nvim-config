@@ -28,14 +28,15 @@ Plug 'junegunn/fzf.vim', { 'depends': 'fzf' }
 Plug 'haya14busa/incsearch.vim'
 " - theme(s)
 Plug 'morhetz/gruvbox'
-" - misc
-Plug 'danro/rename.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'dense-analysis/ale'
+" - git integration
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
+" - misc
+Plug 'danro/rename.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-endwise'
