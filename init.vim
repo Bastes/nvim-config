@@ -106,6 +106,9 @@ set smartcase
 " Re-drawing with C-D
 nmap <C-D> :redraw!<CR>
 
+" :tn => :tabnew
+ca tn tabnew
+
 " Load plugin-specific configurations
 let config_files_root = expand('~/.config/nvim/plugins/')
 let config_files_list = [
