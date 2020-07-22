@@ -33,6 +33,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
+" - lsp
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 " - misc
 Plug 'danro/rename.vim'
 Plug 'scrooloose/nerdtree'
@@ -118,6 +120,7 @@ let config_files_list = [
   \ 'gruvbox',
   \ 'vim-gitgutter',
   \ 'incsearch',
+  \ 'LanguageClient-neovim',
   \ 'rainbow',
   \ 'splitjoin',
   \ 'vim-which-key',
