@@ -22,6 +22,7 @@ Plug 'wavded/vim-stylus'
 Plug 'elzr/vim-json'
 Plug 'leafgarland/typescript-vim'
 Plug 'luochen1990/rainbow'
+Plug 'elixir-editors/vim-elixir'
 " - searches
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim', { 'depends': 'fzf' }
