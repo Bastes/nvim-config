@@ -35,6 +35,10 @@ Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
 " - lsp
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+" - ctags
+Plug 'ludovicchabant/vim-gutentags'
+" - completion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " - misc
 Plug 'danro/rename.vim'
 Plug 'scrooloose/nerdtree'
@@ -115,6 +119,7 @@ ca tn tabnew
 let config_files_root = expand('~/.config/nvim/plugins/')
 let config_files_list = [
   \ 'ale',
+  \ 'deoplete',
   \ 'elm-vim',
   \ 'fzf',
   \ 'gruvbox',
