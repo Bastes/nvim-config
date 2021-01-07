@@ -23,6 +23,7 @@ Plug 'elzr/vim-json'
 Plug 'leafgarland/typescript-vim'
 Plug 'luochen1990/rainbow'
 Plug 'elixir-editors/vim-elixir'
+Plug 'mhinz/vim-mix-format'
 " - searches
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim', { 'depends': 'fzf' }
@@ -130,8 +131,23 @@ let config_files_list = [
   \ 'rainbow',
   \ 'splitjoin',
   \ 'vim-which-key',
+  \ 'vim-mix-format'
   \ ]
 
 for f in config_files_list
   execute 'source ' . config_files_root . f . '.vim'
 endfor
+
+" Triger `autoread` when files changes on disk
+" https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
+" https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
+  \ if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
+
+" Notification after file change
+" https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
+autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
+" lexs are elixir too
+au BufRead,BufNewFile *.html.lexs set filetype=elixir
