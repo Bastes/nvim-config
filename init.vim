@@ -24,6 +24,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'luochen1990/rainbow'
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
+Plug 'chrisbra/csv.vim'
 " - searches
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim', { 'depends': 'fzf' }
@@ -121,6 +122,7 @@ ca tn tabnew
 let config_files_root = expand('~/.config/nvim/plugins/')
 let config_files_list = [
   \ 'ale',
+  \ 'csv',
   \ 'deoplete',
   \ 'elm-vim',
   \ 'fzf',
