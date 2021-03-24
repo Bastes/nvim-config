@@ -29,6 +29,7 @@ Plug 'chrisbra/csv.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim', { 'depends': 'fzf' }
 Plug 'haya14busa/incsearch.vim'
+Plug 'othree/eregex.vim'
 " - theme(s)
 Plug 'morhetz/gruvbox'
 " - git integration
