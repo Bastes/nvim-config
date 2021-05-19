@@ -59,6 +59,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'liuchengxu/vim-which-key'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
