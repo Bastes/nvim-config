@@ -133,6 +133,7 @@ let config_files_list = [
   \ 'LanguageClient-neovim',
   \ 'rainbow',
   \ 'splitjoin',
+  \ 'vim-fugitive',
   \ 'vim-which-key',
   \ 'vim-mix-format'
   \ ]
