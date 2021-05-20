@@ -23,7 +23,6 @@ Plug 'elzr/vim-json'
 Plug 'leafgarland/typescript-vim'
 Plug 'luochen1990/rainbow'
 Plug 'elixir-editors/vim-elixir'
-Plug 'mhinz/vim-mix-format'
 Plug 'chrisbra/csv.vim'
 " - searches
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -39,7 +38,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
 " - lsp
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'dense-analysis/ale'
 " - ctags
 Plug 'ludovicchabant/vim-gutentags'
@@ -132,12 +130,10 @@ let config_files_list = [
   \ 'gruvbox',
   \ 'vim-gitgutter',
   \ 'incsearch',
-  \ 'LanguageClient-neovim',
   \ 'rainbow',
   \ 'splitjoin',
   \ 'vim-fugitive',
-  \ 'vim-which-key',
-  \ 'vim-mix-format'
+  \ 'vim-which-key'
   \ ]
 
 for f in config_files_list
