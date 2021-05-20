@@ -39,6 +39,7 @@ Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
 " - lsp
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+Plug 'dense-analysis/ale'
 " - ctags
 Plug 'ludovicchabant/vim-gutentags'
 " - completion
@@ -46,7 +47,6 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " - misc
 Plug 'danro/rename.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-endwise'
