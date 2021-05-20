@@ -30,6 +30,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim', { 'depends': 'fzf' }
 Plug 'haya14busa/incsearch.vim'
 Plug 'othree/eregex.vim'
+Plug 'unblevable/quick-scope'
 " - theme(s)
 Plug 'morhetz/gruvbox'
 " - git integration
