@@ -59,6 +59,7 @@ Plug 'andrewradev/splitjoin.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'liuchengxu/vim-which-key'
 Plug 'mhinz/vim-startify'
+Plug 'ap/vim-css-color'
 
 call plug#end()
 
