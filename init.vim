@@ -43,6 +43,9 @@ Plug 'dense-analysis/ale'
 Plug 'ludovicchabant/vim-gutentags'
 " - completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" - snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 " - misc
 Plug 'danro/rename.vim'
 Plug 'scrooloose/nerdtree'
@@ -133,6 +136,7 @@ let config_files_list = [
   \ 'incsearch',
   \ 'rainbow',
   \ 'splitjoin',
+  \ 'ultisnips',
   \ 'vim-fugitive',
   \ 'vim-which-key'
   \ ]
