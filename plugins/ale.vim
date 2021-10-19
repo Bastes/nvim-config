@@ -1,4 +1,5 @@
 " Automatic completion
+set completeopt=menu,menuone,preview,noselect,noinsert
 let g:ale_completion_enabled = 1
 
 " Include the linter name, code and message in errors
@@ -38,8 +39,8 @@ nnoremap <Leader>af :ALEFix<CR>
 " Press L-`ar` to find all references matching the word under the caret
 noremap <Leader>ar :ALEFindReferences<CR>
 
-" Press `gd` to go to definition
-nnoremap <silent> gd :ALEGoToDefinition<CR>
+" Press L-`ad` to go to definition
+nnoremap <Leader>ad :ALEGoToDefinition<CR>
 
 " Press `K` to view the type in the gutter
 nnoremap <silent> K :ALEHover<CR>
