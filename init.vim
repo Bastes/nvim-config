@@ -63,6 +63,7 @@ Plug 'jeetsukumaran/vim-buffergator'
 Plug 'liuchengxu/vim-which-key'
 Plug 'mhinz/vim-startify'
 Plug 'ap/vim-css-color'
+Plug 'dhruvasagar/vim-table-mode'
 
 call plug#end()
 
