@@ -138,6 +138,7 @@ let config_files_list = [
   \ 'rainbow',
   \ 'splitjoin',
   \ 'ultisnips',
+  \ 'vim-elixir',
   \ 'vim-fugitive',
   \ 'vim-which-key'
   \ ]
