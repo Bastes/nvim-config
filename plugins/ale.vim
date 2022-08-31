@@ -42,8 +42,8 @@ noremap <Leader>ar :ALEFindReferences<CR>
 " Press L-`ad` to go to definition
 nnoremap <Leader>ad :ALEGoToDefinition<CR>
 
-" Press `K` to view the type in the gutter
-nnoremap <silent> K :ALEHover<CR>
+" Press L-`ah` to view documentation
+nnoremap <Leader>ah :ALEHover<CR>
 
 " fixing default theme faulty ale warning highlights
 highlight ALEWarning ctermbg=Red ctermfg=White
