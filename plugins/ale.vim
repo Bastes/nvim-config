@@ -1,6 +1,6 @@
 " Automatic completion
 set completeopt=menu,menuone,preview,noselect,noinsert
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 
 " Include the linter name, code and message in errors
 let g:ale_echo_msg_format = '[%linter%]% [code]% %s'
