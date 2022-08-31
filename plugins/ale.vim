@@ -11,15 +11,17 @@ let g:ale_lint_on_enter = 1
 let g:ale_fix_on_save = 1
 
 let g:ale_fixers = {
+\  'elixir': 'mix_format',
 \  'elm': 'elm-format',
-\  'ruby': 'rubocop',
 \  'javascript': 'eslint',
-\  'elixir': 'mix_format'
+\  'python': 'autopep8',
+\  'ruby': 'rubocop'
 \}
 
 let g:ale_linters = {
+\  'elixir': ['elixir-ls'],
 \  'elm': 'elm_ls',
-\  'elixir': ['elixir-ls']
+\  'python': ['autopep8', 'pylint', 'pylsp']
 \}
 
 " Disabling dialyzer (too slow, more readable along with the tests)
