@@ -21,7 +21,8 @@ let g:ale_fixers = {
 let g:ale_linters = {
 \  'elixir': ['elixir-ls'],
 \  'elm': 'elm_ls',
-\  'python': ['autopep8', 'pylint', 'pylsp']
+\  'python': ['autopep8', 'pylint', 'pylsp'],
+\  'ruby': 'solargraph'
 \}
 
 " Disabling dialyzer (too slow, more readable along with the tests)
