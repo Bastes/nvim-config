@@ -160,3 +160,6 @@ autocmd FileChangedShellPost *
 
 " lexs are elixir too
 au BufRead,BufNewFile *.html.lexs set filetype=elixir
+
+" Set textwidth to 80 cols when working with *.md files
+au BufRead,BufNewFile *.md setlocal textwidth=80
