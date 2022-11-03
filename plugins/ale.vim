@@ -39,17 +39,17 @@ nnoremap <Leader>an :ALENextWrap<CR>
 " Press L-`af` to manually trigger the fixer
 nnoremap <Leader>af :ALEFix<CR>
 
-" Press L-`agr` to find all references matching the word under the caret
-noremap <Leader>agr :ALEFindReferences<CR>
+" Press L-`f` to find all references matching the word under the caret
+noremap <Leader>f :ALEFindReferences<CR>
 
-" Press L-`agd` to go to definition
-nnoremap <Leader>agd :ALEGoToDefinition<CR>
+" Press L-`d` to go to definition
+nnoremap <Leader>d :ALEGoToDefinition<CR>
 
-" Press L-`arc` to rename the code element under cursor
-nnoremap <Leader>arc :ALERename<CR>
+" Press L-`rc` to rename the code element under cursor
+nnoremap <Leader>rc :ALERename<CR>
 
-" Press L-`arf` to rename the file and fix import paths
-nnoremap <Leader>arf :ALEFileRename<CR>
+" Press L-`rf` to rename the file and fix import paths
+nnoremap <Leader>rf :ALEFileRename<CR>
 
 " Press L-`ah` to view documentation
 nnoremap <Leader>ah :ALEHover<CR>
