@@ -47,6 +47,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " - snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'andrewstuart/vim-kubernetes'
 " - misc
 Plug 'danro/rename.vim'
 Plug 'scrooloose/nerdtree'
