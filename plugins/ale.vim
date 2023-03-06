@@ -32,6 +32,13 @@ let g:ale_elixir_elixir_ls_config = {
 
 let g:ale_elixir_elixir_ls_release = expand("~/elixir-ls/release")
 
+" Setup for elm_ls
+let g:ale_elm_ls_use_global = 1
+let g:ale_elm_ls_executable = "/usr/local/bin/elm-language-server"
+let g:ale_elm_ls_elm_path = "/usr/local/bin/elm"
+let g:ale_elm_ls_elm_format_path = "/usr/local/bin/elm-format"
+let g:ale_elm_ls_elm_test_path = "/usr/local/bin/elm-test"
+
 " Press L-`an`/`ap` to go to next/previous wrap
 nnoremap <Leader>ap :ALEPreviousWrap<CR>
 nnoremap <Leader>an :ALENextWrap<CR>
