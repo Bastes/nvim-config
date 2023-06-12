@@ -22,7 +22,7 @@ Plug 'wavded/vim-stylus'
 Plug 'elzr/vim-json'
 Plug 'leafgarland/typescript-vim'
 Plug 'luochen1990/rainbow'
-Plug 'elixir-editors/vim-elixir'
+" Plug 'elixir-editors/vim-elixir'
 Plug 'chrisbra/csv.vim'
 " - searches
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -66,6 +66,8 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'mhinz/vim-startify'
 Plug 'ap/vim-css-color'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 call plug#end()
 
@@ -128,7 +130,7 @@ ca tn tabnew
 
 " Load plugin-specific configurations
 let config_files_root = expand('~/.config/nvim/plugins/')
-let config_files_list = [
+let vimscript_config_files_list = [
   \ 'ale',
   \ 'csv',
   \ 'deoplete',
@@ -140,13 +142,21 @@ let config_files_list = [
   \ 'rainbow',
   \ 'splitjoin',
   \ 'ultisnips',
-  \ 'vim-elixir',
   \ 'vim-fugitive',
   \ 'vim-which-key'
   \ ]
+  " \ 'vim-elixir',
 
-for f in config_files_list
+for f in vimscript_config_files_list
   execute 'source ' . config_files_root . f . '.vim'
+endfor
+
+let lua_config_files_list = [
+  \ 'nvim-treesitter'
+  \ ]
+
+for f in lua_config_files_list
+  execute 'source ' . config_files_root . f . '.lua'
 endfor
 
 " Triger `autoread` when files changes on disk
@@ -161,7 +171,7 @@ autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 " lexs are elixir too
-au BufRead,BufNewFile *.html.lexs set filetype=elixir
+" au BufRead,BufNewFile *.html.lexs set filetype=elixir
 
 " Set textwidth to 80 cols when working with *.md files
 au BufRead,BufNewFile *.md setlocal textwidth=80
