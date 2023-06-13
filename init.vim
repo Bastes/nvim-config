@@ -22,7 +22,7 @@ Plug 'wavded/vim-stylus'
 Plug 'elzr/vim-json'
 Plug 'leafgarland/typescript-vim'
 Plug 'luochen1990/rainbow'
-" Plug 'elixir-editors/vim-elixir'
+Plug 'elixir-editors/vim-elixir'
 Plug 'chrisbra/csv.vim'
 " - searches
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -134,7 +134,9 @@ let vimscript_config_files_list = [
   \ 'ale',
   \ 'csv',
   \ 'deoplete',
+  \ 'vim-elixir',
   \ 'elm-vim',
+  \ 'vim-fugitive',
   \ 'fzf',
   \ 'gruvbox',
   \ 'vim-gitgutter',
@@ -142,10 +144,8 @@ let vimscript_config_files_list = [
   \ 'rainbow',
   \ 'splitjoin',
   \ 'ultisnips',
-  \ 'vim-fugitive',
   \ 'vim-which-key'
   \ ]
-  " \ 'vim-elixir',
 
 for f in vimscript_config_files_list
   execute 'source ' . config_files_root . f . '.vim'
@@ -169,9 +169,6 @@ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
 " https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
-
-" lexs are elixir too
-" au BufRead,BufNewFile *.html.lexs set filetype=elixir
 
 " Set textwidth to 80 cols when working with *.md files
 au BufRead,BufNewFile *.md setlocal textwidth=80
