@@ -71,6 +71,7 @@ Plug 'ap/vim-css-color'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'svermeulen/vim-easyclip'
+Plug 'mbbill/undotree'
 
 call plug#end()
 
@@ -145,6 +146,7 @@ let vimscript_config_files_list = [
   \ 'splitjoin',
   \ 'tabular',
   \ 'ultisnips',
+  \ 'undotree',
   \ 'vim-easyclip',
   \ 'vim-which-key'
   \ ]
