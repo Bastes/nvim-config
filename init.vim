@@ -70,6 +70,7 @@ Plug 'mhinz/vim-startify'
 Plug 'ap/vim-css-color'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'svermeulen/vim-easyclip'
 
 call plug#end()
 
@@ -144,6 +145,7 @@ let vimscript_config_files_list = [
   \ 'splitjoin',
   \ 'tabular',
   \ 'ultisnips',
+  \ 'vim-easyclip',
   \ 'vim-which-key'
   \ ]
 
