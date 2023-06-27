@@ -124,9 +124,6 @@ if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 set ignorecase
 set smartcase
 
-" Re-drawing with C-D
-nmap <C-D> :redraw!<CR>
-
 " :tn => :tabnew
 ca tn tabnew
 
