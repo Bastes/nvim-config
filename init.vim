@@ -48,6 +48,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'andrewstuart/vim-kubernetes'
+" - tables and alignments
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'godlygeek/tabular'
 " - misc
 Plug 'danro/rename.vim'
 Plug 'scrooloose/nerdtree'
@@ -65,7 +68,6 @@ Plug 'andrewradev/splitjoin.vim'
 Plug 'liuchengxu/vim-which-key'
 Plug 'mhinz/vim-startify'
 Plug 'ap/vim-css-color'
-Plug 'dhruvasagar/vim-table-mode'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
@@ -143,6 +145,7 @@ let vimscript_config_files_list = [
   \ 'incsearch',
   \ 'rainbow',
   \ 'splitjoin',
+  \ 'tabular',
   \ 'ultisnips',
   \ 'vim-which-key'
   \ ]
