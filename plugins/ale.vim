@@ -43,20 +43,20 @@ let g:ale_elm_ls_elm_test_path = "/usr/local/bin/elm-test"
 nnoremap <Leader>ap :ALEPreviousWrap<CR>
 nnoremap <Leader>an :ALENextWrap<CR>
 
-" Press L-`af` to manually trigger the fixer
-nnoremap <Leader>af :ALEFix<CR>
+" Press L-`ai` to manually trigger the fixer
+nnoremap <Leader>ai :ALEFix<CR>
 
-" Press L-`f` to find all references matching the word under the caret
-noremap <Leader>f :ALEFindReferences<CR>
+" Press L-`af` to find all references matching the word under the caret
+noremap <Leader>af :ALEFindReferences<CR>
 
-" Press L-`d` to go to definition
-nnoremap <Leader>d :ALEGoToDefinition<CR>
+" Press L-`ad` to go to definition
+nnoremap <Leader>ad :ALEGoToDefinition<CR>
 
-" Press L-`rc` to rename the code element under cursor
-nnoremap <Leader>rc :ALERename<CR>
+" Press L-`arc` to rename the code element under cursor
+nnoremap <Leader>arc :ALERename<CR>
 
-" Press L-`rf` to rename the file and fix import paths
-nnoremap <Leader>rf :ALEFileRename<CR>
+" Press L-`arf` to rename the file and fix import paths
+nnoremap <Leader>arf :ALEFileRename<CR>
 
 " Press L-`ah` to view documentation
 nnoremap <Leader>ah :ALEHover<CR>
