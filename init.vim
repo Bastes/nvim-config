@@ -71,6 +71,7 @@ Plug 'ap/vim-css-color'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'mbbill/undotree'
+Plug 'christoomey/vim-system-copy'
 
 call plug#end()
 
