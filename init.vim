@@ -72,6 +72,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'mbbill/undotree'
 Plug 'christoomey/vim-system-copy'
+Plug 'svermeulen/vim-yoink'
 
 call plug#end()
 
@@ -147,7 +148,8 @@ let vimscript_config_files_list = [
   \ 'tabular',
   \ 'ultisnips',
   \ 'undotree',
-  \ 'vim-which-key'
+  \ 'vim-which-key',
+  \ 'vim-yoink'
   \ ]
 
 for f in vimscript_config_files_list

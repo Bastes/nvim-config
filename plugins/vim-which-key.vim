@@ -14,6 +14,8 @@ let g:which_key_map.h = {
   \ 'p' : 'Preview Hunk',
   \}
 
+let g:which_key_map.o = 'Open File'
+
 let g:which_key_map.p = 'Paste after (without auto-format)'
 let g:which_key_map.P = 'Paste before (without auto-format)'
 
