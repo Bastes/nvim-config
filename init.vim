@@ -73,6 +73,7 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'mbbill/undotree'
 Plug 'christoomey/vim-system-copy'
 Plug 'svermeulen/vim-yoink'
+Plug 'machakann/vim-swap'
 
 call plug#end()
 
