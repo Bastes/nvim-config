@@ -178,3 +178,5 @@ autocmd FileChangedShellPost *
 
 " Set textwidth to 80 cols when working with *.md files
 au BufRead,BufNewFile *.md setlocal textwidth=80
+
+set colorcolumn=80
