@@ -25,6 +25,12 @@ let g:which_key_map.r = {
   \ 'c' : 'Replace Current Word',
   \ }
 
+let g:which_key_map.y = {
+  \ 'name' : 'Yoink!',
+  \ 'p' : 'Previous Yanked',
+  \ 'n' : 'Next Yanked',
+  \ }
+
 let g:which_key_map.t = {'name' : 'Tabular / Table Mode'}
 
 call which_key#register('<Space>', 'g:which_key_map')
