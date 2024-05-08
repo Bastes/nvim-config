@@ -41,6 +41,7 @@ Plug 'airblade/vim-gitgutter'
 " - lsp
 Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
 Plug 'dense-analysis/ale'
+Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
 " - ctags
 Plug 'ludovicchabant/vim-gutentags'
 " - completion
