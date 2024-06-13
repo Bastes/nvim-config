@@ -14,3 +14,7 @@ function! s:append_dir_with_fzf(line)
 endfunction
 
 cnoremap <expr> <c-x><c-d> <sid>append_dir_with_fzf(getcmdline())
+
+" [] shortcuts to navigate the quickfix list
+nnoremap [f :cn<CR>
+nnoremap ]f :cp<CR>
