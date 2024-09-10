@@ -40,6 +40,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
 " - lsp
+Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
 Plug 'dense-analysis/ale'
 " - ctags
 Plug 'ludovicchabant/vim-gutentags'
