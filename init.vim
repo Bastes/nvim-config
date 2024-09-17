@@ -75,7 +75,7 @@ Plug 'mbbill/undotree'
 Plug 'christoomey/vim-system-copy'
 Plug 'svermeulen/vim-yoink'
 Plug 'machakann/vim-swap'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 call plug#end()
 
