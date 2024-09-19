@@ -39,9 +39,9 @@ let g:ale_elm_ls_elm_path = "/usr/local/bin/elm"
 let g:ale_elm_ls_elm_format_path = "/usr/local/bin/elm-format"
 let g:ale_elm_ls_elm_test_path = "/usr/local/bin/elm-test"
 
-" Press L-`an`/`ap` to go to next/previous wrap
-nnoremap <Leader>ap :ALEPreviousWrap<CR>
-nnoremap <Leader>an :ALENextWrap<CR>
+" Press `[w` / `]w` to go to previous/next wrap
+nnoremap [w :ALEPreviousWrap<CR>
+nnoremap ]w :ALENextWrap<CR>
 
 " Press L-`ai` to manually trigger the fixer
 nnoremap <Leader>ai :ALEFix<CR>
