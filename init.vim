@@ -22,7 +22,6 @@ Plug 'wavded/vim-stylus'
 Plug 'elzr/vim-json'
 Plug 'leafgarland/typescript-vim'
 Plug 'luochen1990/rainbow'
-Plug 'elixir-editors/vim-elixir'
 Plug 'chrisbra/csv.vim'
 Plug 'hail2u/vim-css3-syntax'
 " - searches
