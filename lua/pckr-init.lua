@@ -35,9 +35,7 @@ require('pckr').add{
   'chrisbra/csv.vim';
   'hail2u/vim-css3-syntax';
   -- searches
-  { 'junegunn/fzf.vim',
-    requires = { 'junegunn/fzf', run = './install --all' }
-  };
+  { 'junegunn/fzf.vim', requires = { 'junegunn/fzf' } };
   'haya14busa/incsearch.vim';
   'unblevable/quick-scope';
   'kqito/vim-easy-replace';
