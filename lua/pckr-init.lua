@@ -47,7 +47,12 @@ require('pckr').add{
   'junegunn/gv.vim';
   'airblade/vim-gitgutter';
   -- lsp
-  { 'GrzegorzKozub/vim-elixirls', run = ':ElixirLsCompileSync' };
+  { 'GrzegorzKozub/vim-elixirls', run = function()
+    vim.cmd('cd vim-elixirls')
+    vim.fn.system('git submodule update --init')
+    vim.cmd('cd ..')
+    vim.cmd('ElixirLsCompileSync')
+  end};
   'dense-analysis/ale';
   -- ctags
   'ludovicchabant/vim-gutentags';

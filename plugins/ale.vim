@@ -30,7 +30,7 @@ let g:ale_elixir_elixir_ls_config = {
 \  'elixirLS': { 'dialyzerEnabled': v:false }
 \}
 
-let g:ale_elixir_elixir_ls_release = expand('~/.vim/plugged/vim-elixirls/elixir-ls/release')
+let g:ale_elixir_elixir_ls_release = expand('~/.local/share/nvim/site/pack/pckr/opt/vim-elixirls/elixir-ls/release')
 
 " Setup for elm_ls
 let g:ale_elm_ls_use_global = 1
