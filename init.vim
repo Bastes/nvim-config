@@ -21,7 +21,7 @@ set expandtab
 set list
 
 " space makes for a better leader key
-let mapleader = " "
+let mapleader = "\<Space>"
 
 " folds using the syntax specifics
 set foldmethod=syntax
