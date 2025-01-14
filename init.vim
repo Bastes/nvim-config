@@ -83,6 +83,8 @@ let lua_config_files_list = [
   \ 'nvim-treesitter'
   \ ]
 
+lua require("nvim-yati-init")
+
 for f in lua_config_files_list
   execute 'source ' . config_files_root . f . '.lua'
 endfor
