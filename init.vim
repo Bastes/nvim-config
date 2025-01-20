@@ -103,4 +103,8 @@ autocmd FileChangedShellPost *
 " Set textwidth to 80 cols when working with *.md files
 au BufRead,BufNewFile *.md setlocal textwidth=80
 
+" Set the system clipboard as default clipboard to make copy-paste work
+" accross nvim and the system's other apps
+set clipboard=unnamedplus
+
 set colorcolumn=80
