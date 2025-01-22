@@ -84,7 +84,7 @@ require('pckr').add{
   'ap/vim-css-color';
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
   'nvim-treesitter/nvim-treesitter-textobjects';
-  { 'yioneko/nvim-yati', tag = '*', requires = { 'nvim-treesitter/nvim-treesitter' } };
+  { 'yioneko/nvim-yati', requires = { 'nvim-treesitter/nvim-treesitter' } };
   'mbbill/undotree';
   'christoomey/vim-system-copy';
   'svermeulen/vim-yoink';
