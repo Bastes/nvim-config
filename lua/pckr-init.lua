@@ -18,7 +18,7 @@ bootstrap_pckr()
 
 require('pckr').add{
   -- AI
-  { 'David-Kunz/gen.nvim' },
+   'David-Kunz/gen.nvim',
   -- syntaxes
   'dag/vim-fish';
   'hughbien/md-vim';

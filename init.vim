@@ -79,6 +79,8 @@ for f in vimscript_config_files_list
   execute 'source ' . config_files_root . f . '.vim'
 endfor
 
+lua require("gen-init")
+
 let lua_config_files_list = [
   \ 'nvim-treesitter'
   \ ]
