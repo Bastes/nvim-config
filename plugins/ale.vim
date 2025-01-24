@@ -52,6 +52,9 @@ noremap <Leader>af :ALEFindReferences<CR>
 " Press L-`ad` to go to definition
 nnoremap <Leader>ad :ALEGoToDefinition<CR>
 
+" Press L-`ae` to see entire error message
+nnoremap <Leader>ae :ALEDetail<CR>
+
 " Press L-`arc` to rename the code element under cursor
 nnoremap <Leader>arc :ALERename<CR>
 
