@@ -62,6 +62,14 @@ require('pckr').add{
       require("typescript-tools").setup {}
     end
   };
+  { 'lukas-reineke/lsp-format.nvim',
+    requires = { 'neovim/nvim-lspconfig' },
+    config = function()
+      require('lsp-format').setup({})
+      require('typescript-tools').setup { on_attach = require('lsp-format').on_attach }
+      -- elixir-tools is configured in its own file
+    end
+  };
   -- ctags
   'ludovicchabant/vim-gutentags';
   -- completion
