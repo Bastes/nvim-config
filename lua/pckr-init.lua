@@ -55,6 +55,7 @@ require('pckr').add{
     vim.cmd('cd ..')
     vim.cmd('ElixirLsCompileSync')
   end};
+  { 'elixir-tools/elixir-tools.nvim', tag = 'stable', requires = { 'nvim-lua/plenary.nvim' }};
   { 'pmizio/typescript-tools.nvim', requires = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig', run = function()
     require("typescript-tools").setup {}
   end } };

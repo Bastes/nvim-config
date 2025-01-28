@@ -86,6 +86,7 @@ let lua_config_files_list = [
   \ 'nvim-treesitter'
   \ ]
 
+lua require("elixir-tools-init")
 lua require("nvim-yati-init")
 
 for f in lua_config_files_list
