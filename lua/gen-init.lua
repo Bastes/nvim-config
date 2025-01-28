@@ -1,5 +1,5 @@
 require('gen').setup({
-  model = 'codellama:7b',
+  model = 'codellama:13b',
   display_mode = 'horizontal-split'
 })
 
