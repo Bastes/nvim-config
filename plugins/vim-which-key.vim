@@ -5,7 +5,6 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 set timeoutlen=500
 
 let g:which_key_map = {}
-let g:which_key_map.a = {'name' : 'Ale'}
 
 let g:which_key_map.h = {
   \ 'name' : 'Git',
