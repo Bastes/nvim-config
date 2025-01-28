@@ -55,6 +55,9 @@ require('pckr').add{
     vim.cmd('cd ..')
     vim.cmd('ElixirLsCompileSync')
   end};
+  { 'pmizio/typescript-tools.nvim', requires = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig', run = function()
+    require("typescript-tools").setup {}
+  end } };
   'dense-analysis/ale';
   -- ctags
   'ludovicchabant/vim-gutentags';
