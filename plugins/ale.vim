@@ -39,26 +39,5 @@ let g:ale_elm_ls_elm_path = "/usr/local/bin/elm"
 let g:ale_elm_ls_elm_format_path = "/usr/local/bin/elm-format"
 let g:ale_elm_ls_elm_test_path = "/usr/local/bin/elm-test"
 
-" Press L-`ai` to manually trigger the fixer
-nnoremap <Leader>ai :ALEFix<CR>
-
-" Press L-`af` to find all references matching the word under the caret
-noremap <Leader>af :ALEFindReferences<CR>
-
-" Press L-`ad` to go to definition
-nnoremap <Leader>ad :ALEGoToDefinition<CR>
-
-" Press L-`ae` to see entire error message
-nnoremap <Leader>ae :ALEDetail<CR>
-
-" Press L-`arc` to rename the code element under cursor
-nnoremap <Leader>arc :ALERename<CR>
-
-" Press L-`arf` to rename the file and fix import paths
-nnoremap <Leader>arf :ALEFileRename<CR>
-
-" Press L-`ah` to view documentation
-nnoremap <Leader>ah :ALEHover<CR>
-
 " fixing default theme faulty ale warning highlights
 highlight ALEWarning ctermbg=Red ctermfg=White

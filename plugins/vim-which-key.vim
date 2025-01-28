@@ -14,6 +14,17 @@ let g:which_key_map.h = {
   \ 'p' : 'Preview Hunk',
   \}
 
+let g:which_key_map.l = {
+  \ 'name' : 'LSP',
+  \ 'd' : 'go to definition',
+  \ 'D' : 'go to Declaration',
+  \ 'f' : 'format document',
+  \ 'h' : 'show informations',
+  \ 'r' : 'find references',
+  \ 'R' : 'Rename',
+  \ 's' : 'list document symbols',
+  \}
+
 let g:which_key_map.o = 'Open File'
 
 let g:which_key_map.p = 'Paste after (without auto-format)'
