@@ -32,7 +32,6 @@ require('pckr').add{
   'pangloss/vim-javascript';
   'wavded/vim-stylus';
   'elzr/vim-json';
-  'leafgarland/typescript-vim';
   'chrisbra/csv.vim';
   'hail2u/vim-css3-syntax';
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
