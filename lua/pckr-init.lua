@@ -21,7 +21,6 @@ require('pckr').add{
    'David-Kunz/gen.nvim',
   -- syntaxes
   'dag/vim-fish';
-  'hughbien/md-vim';
   'tpope/vim-rails';
   'pangloss/vim-javascript';
   'wavded/vim-stylus';
