@@ -25,7 +25,6 @@ require('pckr').add{
   'nono/vim-handlebars';
   'tpope/vim-markdown';
   'tpope/vim-rails';
-  'vim-ruby/vim-ruby';
   'neovimhaskell/haskell-vim';
   'Zaptic/elm-vim';
   'andys8/vim-elm-syntax';
