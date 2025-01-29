@@ -25,7 +25,6 @@ require('pckr').add{
   'nono/vim-handlebars';
   'tpope/vim-markdown';
   'tpope/vim-rails';
-  'neovimhaskell/haskell-vim';
   'pangloss/vim-javascript';
   'wavded/vim-stylus';
   'chrisbra/csv.vim';
