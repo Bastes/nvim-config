@@ -1,3 +1,11 @@
+-- dirty hack ; required so that elixir's .ex files are not typecasted as
+-- euphoria3, whatever that is
+vim.filetype.add({
+  pattern = {
+    ['.*/*.html.lexs'] = 'elixir'
+  }
+})
+
 require("elixir").setup({
   nextls = {enable = false},
   elixirls = {
