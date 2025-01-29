@@ -35,6 +35,9 @@ require('pckr').add{
   'leafgarland/typescript-vim';
   'chrisbra/csv.vim';
   'hail2u/vim-css3-syntax';
+  { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
+  'nvim-treesitter/nvim-treesitter-textobjects';
+  { 'yioneko/nvim-yati', requires = { 'nvim-treesitter/nvim-treesitter' } };
   -- searches
   { 'junegunn/fzf.vim', requires = { 'junegunn/fzf' } };
   'haya14busa/incsearch.vim';
@@ -104,9 +107,6 @@ require('pckr').add{
   'liuchengxu/vim-which-key';
   'mhinz/vim-startify';
   'ap/vim-css-color';
-  { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
-  'nvim-treesitter/nvim-treesitter-textobjects';
-  { 'yioneko/nvim-yati', requires = { 'nvim-treesitter/nvim-treesitter' } };
   'mbbill/undotree';
   'christoomey/vim-system-copy';
   'svermeulen/vim-yoink';
