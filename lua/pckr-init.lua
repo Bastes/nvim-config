@@ -20,7 +20,6 @@ require('pckr').add{
   -- AI
    'David-Kunz/gen.nvim',
   -- syntaxes
-  'dag/vim-fish';
   'tpope/vim-rails';
   'pangloss/vim-javascript';
   'wavded/vim-stylus';
