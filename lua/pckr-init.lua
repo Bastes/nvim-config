@@ -33,7 +33,6 @@ require('pckr').add{
   'wavded/vim-stylus';
   'elzr/vim-json';
   'leafgarland/typescript-vim';
-  'luochen1990/rainbow';
   'chrisbra/csv.vim';
   'hail2u/vim-css3-syntax';
   -- searches
