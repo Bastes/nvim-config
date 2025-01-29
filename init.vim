@@ -56,7 +56,6 @@ ca tn tabnew
 " Load plugin-specific configurations
 let config_files_root = expand('~/.config/nvim/plugins/')
 let vimscript_config_files_list = [
-  \ 'deoplete',
   \ 'vim-elixir',
   \ 'elm-vim',
   \ 'vim-fugitive',
@@ -77,9 +76,11 @@ for f in vimscript_config_files_list
   execute 'source ' . config_files_root . f . '.vim'
 endfor
 
+lua require('cmp-init')
 lua require('csv-init')
 lua require('lsp-init')
 lua require('gen-init')
+lua require('typescript-tools-init')
 
 let lua_config_files_list = [
   \ 'nvim-treesitter'

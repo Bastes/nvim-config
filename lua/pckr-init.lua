@@ -66,14 +66,21 @@ require('pckr').add{
     requires = { 'neovim/nvim-lspconfig' },
     config = function()
       require('lsp-format').setup({})
-      require('typescript-tools').setup { on_attach = require('lsp-format').on_attach }
-      -- elixir-tools is configured in its own file
     end
   };
   -- ctags
   'ludovicchabant/vim-gutentags';
   -- completion
-  { 'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins' };
+  { 'hrsh7th/nvim-cmp',
+    requires = {
+      'neovim/nvim-lspconfig';
+      'hrsh7th/cmp-nvim-lsp';
+      'hrsh7th/cmp-buffer';
+      'hrsh7th/cmp-path';
+      'hrsh7th/cmp-cmdline';
+      'quangnguyen30192/cmp-nvim-ultisnips';
+    }
+  };
   -- snippets
   'SirVer/ultisnips';
   'honza/vim-snippets';
