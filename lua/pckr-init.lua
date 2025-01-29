@@ -28,7 +28,6 @@ require('pckr').add{
   'neovimhaskell/haskell-vim';
   'pangloss/vim-javascript';
   'wavded/vim-stylus';
-  'elzr/vim-json';
   'chrisbra/csv.vim';
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
   'nvim-treesitter/nvim-treesitter-textobjects';
