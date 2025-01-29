@@ -23,7 +23,6 @@ require('pckr').add{
   'dag/vim-fish';
   'hughbien/md-vim';
   'nono/vim-handlebars';
-  'tpope/vim-markdown';
   'tpope/vim-rails';
   'pangloss/vim-javascript';
   'wavded/vim-stylus';
