@@ -21,7 +21,6 @@ require('pckr').add{
    'David-Kunz/gen.nvim',
   -- syntaxes
   'tpope/vim-rails';
-  'pangloss/vim-javascript';
   'wavded/vim-stylus';
   'chrisbra/csv.vim';
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
