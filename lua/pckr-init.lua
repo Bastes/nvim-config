@@ -26,8 +26,6 @@ require('pckr').add{
   'tpope/vim-markdown';
   'tpope/vim-rails';
   'neovimhaskell/haskell-vim';
-  'Zaptic/elm-vim';
-  'andys8/vim-elm-syntax';
   'pangloss/vim-javascript';
   'wavded/vim-stylus';
   'elzr/vim-json';
@@ -67,6 +65,7 @@ require('pckr').add{
       require('lsp-format').setup({})
     end
   };
+  'Zaptic/elm-vim';
   -- ctags
   'ludovicchabant/vim-gutentags';
   -- completion
