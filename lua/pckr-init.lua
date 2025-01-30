@@ -57,7 +57,6 @@ require('pckr').add{
       require('lsp-format').setup({})
     end
   };
-  'Zaptic/elm-vim';
   -- ctags
   'ludovicchabant/vim-gutentags';
   -- completion
