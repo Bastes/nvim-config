@@ -56,7 +56,6 @@ ca tn tabnew
 " Load plugin-specific configurations
 let config_files_root = expand('~/.config/nvim/plugins/')
 let vimscript_config_files_list = [
-  \ 'vim-fugitive',
   \ 'fzf',
   \ 'gruvbox',
   \ 'vim-gitgutter',
@@ -79,6 +78,7 @@ lua require('csv-init')
 lua require('lsp-init')
 lua require('gen-init')
 lua require('typescript-tools-init')
+lua require('vim-fugitive-init')
 
 let lua_config_files_list = [
   \ 'nvim-treesitter'
