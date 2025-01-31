@@ -56,7 +56,6 @@ ca tn tabnew
 " Load plugin-specific configurations
 let config_files_root = expand('~/.config/nvim/plugins/')
 let vimscript_config_files_list = [
-  \ 'vim-which-key',
   \ 'vim-yoink'
   \ ]
 
@@ -78,6 +77,7 @@ lua require('ultisnips-init')
 lua require('undotree-init')
 lua require('vim-fugitive-init')
 lua require('vim-gitgutter-init')
+lua require( 'vim-which-key-init')
 
 let lua_config_files_list = [
   \ 'nvim-treesitter'

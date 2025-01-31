@@ -91,7 +91,7 @@ require('pckr').add{
   'tpope/vim-repeat';
   'tpope/vim-sleuth';
   'andrewradev/splitjoin.vim';
-  'liuchengxu/vim-which-key';
+  { 'AckslD/nvim-whichkey-setup.lua', requires = { 'liuchengxu/vim-which-key' } };
   'mhinz/vim-startify';
   'ap/vim-css-color';
   'mbbill/undotree';
