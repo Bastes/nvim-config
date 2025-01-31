@@ -56,7 +56,6 @@ ca tn tabnew
 " Load plugin-specific configurations
 let config_files_root = expand('~/.config/nvim/plugins/')
 let vimscript_config_files_list = [
-  \ 'splitjoin',
   \ 'tabular',
   \ 'ultisnips',
   \ 'undotree',
@@ -75,9 +74,10 @@ lua require('fzf-init')
 lua require('gen-init')
 lua require('gruvbox-init')
 lua require('incsearch-init')
-lua require('vim-gitgutter-init')
+lua require('splitjoin-init')
 lua require('typescript-tools-init')
 lua require('vim-fugitive-init')
+lua require('vim-gitgutter-init')
 
 let lua_config_files_list = [
   \ 'nvim-treesitter'
