@@ -56,7 +56,6 @@ ca tn tabnew
 " Load plugin-specific configurations
 let config_files_root = expand('~/.config/nvim/plugins/')
 let vimscript_config_files_list = [
-  \ 'fzf',
   \ 'gruvbox',
   \ 'vim-gitgutter',
   \ 'incsearch',
@@ -76,6 +75,7 @@ endfor
 lua require('cmp-init')
 lua require('csv-init')
 lua require('lsp-init')
+lua require('fzf-init')
 lua require('gen-init')
 lua require('typescript-tools-init')
 lua require('vim-fugitive-init')
