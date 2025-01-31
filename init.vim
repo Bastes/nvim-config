@@ -55,13 +55,6 @@ ca tn tabnew
 
 " Load plugin-specific configurations
 let config_files_root = expand('~/.config/nvim/plugins/')
-let vimscript_config_files_list = [
-  \ 'vim-yoink'
-  \ ]
-
-for f in vimscript_config_files_list
-  execute 'source ' . config_files_root . f . '.vim'
-endfor
 
 lua require('cmp-init')
 lua require('csv-init')
@@ -77,7 +70,8 @@ lua require('ultisnips-init')
 lua require('undotree-init')
 lua require('vim-fugitive-init')
 lua require('vim-gitgutter-init')
-lua require( 'vim-which-key-init')
+lua require('vim-which-key-init')
+lua require('vim-yoink-init')
 
 let lua_config_files_list = [
   \ 'nvim-treesitter'
