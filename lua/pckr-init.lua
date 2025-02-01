@@ -27,7 +27,6 @@ require('pckr').add{
   { 'yioneko/nvim-yati', requires = { 'nvim-treesitter/nvim-treesitter' } };
   -- searches
   { 'junegunn/fzf.vim', requires = { 'junegunn/fzf' } };
-  'haya14busa/incsearch.vim';
   'unblevable/quick-scope';
   'kqito/vim-easy-replace';
   -- theme(s)
