@@ -1,10 +1,8 @@
-require("pckr-init")
+-- require("pckr-init")
+require("config.lazy")
 
 -- do not conceal quotes in json!
 vim.opt.cursorline = true
-
--- space makes for a better leader key
-vim.g.mapleader = ' '
 
 -- leader-c to toggle conceallevel
 vim.keymap.set('n', '<leader>c',
@@ -84,27 +82,6 @@ vim.opt.smartcase = true
 
 -- :tn => :tabnew
 vim.cmd('ca tn tabnew')
-
--- plugins configurations
-require("elixir-tools-init")
-require("nvim-yati-init")
-require('cmp-init')
-require('csv-init')
-require('fzf-init')
-require('gen-init')
-require('gruvbox-init')
-require('lsp-init')
-require('nvim-treesitter-init')
-require('ruby-lsp-init')
-require('splitjoin-init')
-require('tabular-init')
-require('typescript-tools-init')
-require('ultisnips-init')
-require('undotree-init')
-require('vim-fugitive-init')
-require('vim-gitgutter-init')
-require('vim-which-key-init')
-require('vim-yoink-init')
 
 -- set the system clipboard as default clipboard to make copy-paste work
 -- across nvim and the system's other apps
