@@ -1,10 +1,11 @@
 return {
-  "elixir-tools/elixir-tools.nvim",
+  'elixir-tools/elixir-tools.nvim',
+  dependencies = { 'nvim-lua/plenary.nvim' },
   version = "*",
-  event = { "BufReadPre", "BufNewFile" },
+  event = { 'BufReadPre', 'BufNewFile' },
   config = function()
-    local elixir = require("elixir")
-    local elixirls = require("elixir.elixirls")
+    local elixir = require('elixir')
+    local elixirls = require('elixir.elixirls')
 
     vim.filetype.add({
       pattern = {
@@ -13,12 +14,13 @@ return {
     })
 
     elixir.setup {
-      nextls = { enable = true },
-      elixirls = { enable = false },
-      projectionist = { enable = true }
+      nextls = { enable = false },
+      elixirls = {
+        enable = true,
+        capabilities = require('cmp_nvim_lsp').default_capabilities()
+      },
+      projectionist = { enable = true },
+      -- on_attach = require('lsp-format').on_attach,
     }
-  end,
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-  },
+  end
 }
