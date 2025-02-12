@@ -44,8 +44,7 @@ return {
         ),
       }),
       sources = cmp.config.sources({
-        -- TODO: activate with lsp support
-        -- { name = 'nvim_lsp' },
+        { name = 'nvim_lsp' },
         { name = 'ultisnips' },
       }, {
         { name = 'buffer' },
@@ -81,10 +80,6 @@ return {
       }),
       matching = { disallow_symbol_nonprefix_matching = false }
     })
-
-    -- Set up lspconfig.
-    -- TODO: activate with lsp support
-    -- local capabilities = require('cmp_nvim_lsp').default_capabilities()
   end
 }
 
