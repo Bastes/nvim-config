@@ -17,10 +17,10 @@ return {
       nextls = { enable = false },
       elixirls = {
         enable = true,
-        capabilities = require('cmp_nvim_lsp').default_capabilities()
+        capabilities = require('cmp_nvim_lsp').default_capabilities(),
+        on_attach = require('lsp-format').on_attach
       },
       projectionist = { enable = true },
-      -- on_attach = require('lsp-format').on_attach,
     }
   end
 }
