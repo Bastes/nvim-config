@@ -17,6 +17,32 @@ return {
       vim.keymap.set("n", "<leader>ls", vim.lsp.buf.document_symbol, { noremap = true, silent = true })
       vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references, { noremap = true, silent = true })
       vim.keymap.set("n", "<leader>lR", vim.lsp.buf.rename, { noremap = true, silent = true })
+
+      vim.opt.signcolumn = "yes"
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = "ruby",
+        callback = function()
+          vim.lsp.start {
+            name = "rubocop",
+            cmd = { "bundle", "exec", "rubocop", "--lsp" }
+          }
+        end
+      })
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*.rb",
+        callback = function()
+          vim.lsp.buf.format()
+        end,
+      })
+
+      local lspconfig = require('lspconfig')
+      lspconfig.ruby_lsp.setup({
+        init_options = {
+          formatter = 'standard',
+          linters = { 'standard' },
+        },
+        capabilities = require('cmp_nvim_lsp').default_capabilities(),
+      })
     end,
   },
 }
