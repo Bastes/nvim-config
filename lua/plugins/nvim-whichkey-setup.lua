@@ -27,7 +27,7 @@ return {
             R = 'Rename',
             s = 'list document symbols',
         },
-        o = 'Open File',
+        f = { name = 'Find (FzfLua)' },
         p = 'Paste after (without auto-format)',
         P = 'Paste before (without auto-format)',
         r = {
