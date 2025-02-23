@@ -4,6 +4,11 @@ return {
   opts = {},
   config = function()
     local FzfLua = require('fzf-lua')
+    FzfLua.setup({
+      files = {
+        cmd = [[rg --color=never --hidden --files -g "!**/*.{jpg,png,webp}"]]
+      }
+    })
     vim.keymap.set('n', '<leader>ff', FzfLua.files, { desc = 'find [F]iles' })
     vim.keymap.set('n', '<leader>fb', FzfLua.buffers, { desc = 'find [B]uffers' })
     vim.keymap.set('n', '<leader>fo', FzfLua.oldfiles, { desc = 'find [O]ld files' })
