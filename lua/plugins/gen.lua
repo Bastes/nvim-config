@@ -1,7 +1,7 @@
 return {
   "David-Kunz/gen.nvim",
   opts = {
-    model = 'codellama:13b',
+    model = 'codellama:13b-instruct',
     display_mode = 'horizontal-split'
   },
   config = function()
