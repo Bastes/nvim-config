@@ -43,6 +43,8 @@ return {
         },
         capabilities = require('cmp_nvim_lsp').default_capabilities(),
       })
+
+      lspconfig.syntax_tree.setup {}
     end,
   },
 }
