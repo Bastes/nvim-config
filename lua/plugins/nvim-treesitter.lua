@@ -4,7 +4,7 @@ return {
   config = function()
     require('nvim-treesitter.configs').setup {
       -- A list of parser names, or "all" (the five listed parsers should always be installed)
-      ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "comment", "javascript", "ruby", "haskell", "elm" },
+      ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "comment", "javascript", "ruby", "haskell", "elm", "html" },
 
       -- Install parsers synchronously (only applied to `ensure_installed`)
       sync_install = false,
@@ -43,5 +43,11 @@ return {
         additional_vim_regex_highlighting = false,
       },
     }
+
+    vim.filetype.add({
+      pattern = {
+        [".*/*.html.erb"] = 'html',
+      }
+    })
   end
 }
