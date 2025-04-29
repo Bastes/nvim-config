@@ -19,32 +19,17 @@ return {
       vim.keymap.set("n", "<leader>lR", vim.lsp.buf.rename, { noremap = true, silent = true })
 
       vim.opt.signcolumn = "yes"
-      vim.api.nvim_create_autocmd("FileType", {
-        pattern = "ruby",
-        callback = function()
-          vim.lsp.start {
-            name = "rubocop",
-            cmd = { "bundle", "exec", "rubocop", "--lsp" }
-          }
-        end
-      })
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        pattern = "*.rb",
-        callback = function()
-          vim.lsp.buf.format()
-        end,
-      })
 
       local lspconfig = require('lspconfig')
+
       lspconfig.ruby_lsp.setup({
+        on_attach = require('lsp-format').on_attach,
         init_options = {
-          formatter = 'standard',
+          formatter = 'auto',
           linters = { 'standard' },
         },
         capabilities = require('cmp_nvim_lsp').default_capabilities(),
       })
-
-      lspconfig.syntax_tree.setup {}
     end,
   },
 }
