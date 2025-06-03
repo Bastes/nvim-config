@@ -30,6 +30,15 @@ return {
         },
         capabilities = require('cmp_nvim_lsp').default_capabilities(),
       })
+      lspconfig.ts_ls.setup({
+        init_options = {
+          formatter = 'auto',
+        },
+        filetypes = {
+          "javascript",
+          "typescript",
+        },
+      })
     end,
   },
 }
