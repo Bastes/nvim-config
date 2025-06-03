@@ -10,7 +10,8 @@ return {
     provider = "ollama",
     providers = {
       ollama = {
-        model = "codellama:13b-instruct"
+        endpoint = "http://localhost:11434",
+        model = "mistral:7b",
       },
     },
   },
