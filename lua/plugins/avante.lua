@@ -8,8 +8,10 @@ return {
     auto_suggestions_provider = "ollama",
     debug = true,
     provider = "ollama",
-    ollama = {
-      model = "codellama:13b-instruct"
+    providers = {
+      ollama = {
+        model = "codellama:13b-instruct"
+      },
     },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
