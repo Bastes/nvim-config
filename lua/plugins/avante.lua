@@ -7,11 +7,17 @@ return {
     -- add any opts here
     auto_suggestions_provider = "ollama",
     debug = true,
-    provider = "ollama",
+    provider = "claude",
+    mode = "agentic",
+    auto_suggestion_provider = "claude",
     providers = {
-      ollama = {
-        endpoint = "http://localhost:11434",
-        model = "mistral:7b",
+      claude = {
+        endpoint = "https://api.anthropic.com",
+        model = "claude-sonnet-4-20250514",
+        extra_request_body = {
+          temperature = 0.75,
+          max_tokens = 4096,
+        },
       },
     },
   },
