@@ -23,8 +23,7 @@ return {
       eruby = { "erb_format" },
     },
     default_format_opts = {
-      async = true,
-      timeout_ms = 10000
+      async = true
     },
     formatters = {
       standardjs = {
@@ -34,6 +33,6 @@ return {
         exit_codes = { 0, 1 },
       },
     },
-    format_on_save = { async = true }
+    format_after_save = { async = true }
   },
 }
