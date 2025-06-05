@@ -20,6 +20,7 @@ return {
       elixir = { "mix" },
       javascript = { "standardjs" },
       ruby = { "rubocop" },
+      eruby = { "erb_format" },
     },
     default_format_opts = {
       async = true,

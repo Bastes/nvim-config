@@ -53,11 +53,5 @@ return {
         vim.bo.expandtab = true
       end,
     })
-
-    vim.filetype.add({
-      pattern = {
-        [".*/*.html.erb"] = 'html',
-      }
-    })
   end
 }
