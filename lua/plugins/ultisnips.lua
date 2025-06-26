@@ -5,7 +5,7 @@ return {
     -- Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
     -- - https://github.com/Valloric/YouCompleteMe
     -- - https://github.com/nvim-lua/completion-nvim
-    vim.g.UltiSnipsExpandTrigger = "<Tab>"
+    vim.g.UltiSnipsExpandTrigger = "<C-\\>"
     vim.g.UltiSnipsJumpForwardTrigger = "<Tab>"
     vim.g.UltiSnipsJumpBackwardTrigger = "<S-Tab>"
 
