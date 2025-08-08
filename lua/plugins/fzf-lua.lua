@@ -16,7 +16,7 @@ return {
     vim.keymap.set('n', '<leader>fl', FzfLua.lines, { desc = 'find [L]ines in buffers' })
     vim.keymap.set('n', '<leader>fs', FzfLua.treesitter, { desc = 'find [S]ymbols (from Treesitter)' })
     vim.keymap.set('n', '<leader>ft', FzfLua.tabs, { desc = 'find [T]abs' })
-    vim.keymap.set('n', '<leader>fg', FzfLua.grep, { desc = 'find [G]rep' })
+    vim.keymap.set('n', '<leader>fg', FzfLua.live_grep, { desc = 'find [G]rep' })
     vim.keymap.set('n', '<leader>fr', FzfLua.resume, { desc = 'find [R]esume previous' })
 
     -- [] shortcuts to navigate the quickfix list
