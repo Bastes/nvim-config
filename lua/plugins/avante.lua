@@ -7,10 +7,13 @@ return {
     -- add any opts here
     auto_suggestions_provider = "ollama",
     debug = true,
-    provider = "claude",
+    provider = "ollama",
     mode = "agentic",
-    auto_suggestion_provider = "claude",
     providers = {
+      ollama = {
+        endpoint = "http://localhost:11434",
+        model = "qwen2.5-coder:7b"
+      },
       claude = {
         endpoint = "https://api.anthropic.com",
         model = "claude-sonnet-4-20250514",
