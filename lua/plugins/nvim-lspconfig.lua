@@ -19,9 +19,9 @@ return {
 
       vim.opt.signcolumn = "yes"
 
-      local lspconfig = require('lspconfig')
+      vim.lsp.enable('ruby_lsp')
 
-      lspconfig.ruby_lsp.setup({
+      vim.lsp.config("ruby_lsp", {
         init_options = {
           linters = { 'standard' },
         },
