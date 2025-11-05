@@ -89,3 +89,7 @@ vim.opt.clipboard = "unnamedplus"
 
 -- adds a color column at 80 to avoir overflowing as much as possible
 vim.opt.colorcolumn = "80"
+
+-- spelling in english and french
+vim.opt_local.spell = true
+vim.opt.spelllang = {"en_gb", "fr"}
