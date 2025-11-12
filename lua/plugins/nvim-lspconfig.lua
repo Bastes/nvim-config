@@ -19,7 +19,7 @@ return {
 
       vim.opt.signcolumn = "yes"
 
-      vim.lsp.enable('ruby_lsp')
+      vim.lsp.enable("ruby_lsp")
 
       vim.lsp.config("ruby_lsp", {
         init_options = {
@@ -27,6 +27,8 @@ return {
         },
         capabilities = require('cmp_nvim_lsp').default_capabilities(),
       })
+
+      vim.lsp.enable("gopls")
     end,
   },
 }
