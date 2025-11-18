@@ -28,7 +28,7 @@ return {
       mapping = cmp.mapping.preset.insert({
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), {'i', 'c'}),
         ['<C-e>'] = cmp.mapping.abort(),
         ["<Tab>"] = cmp.mapping(
           function(fallback)
@@ -52,7 +52,7 @@ return {
               return vim.api.nvim_list_bufs()
             end
           }
-        },
+        }
       })
     })
 
