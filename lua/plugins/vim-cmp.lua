@@ -30,7 +30,7 @@ return {
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), {'i', 'c'}),
         ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
         ["<Tab>"] = cmp.mapping(
           function(fallback)
             cmp_ultisnips_mappings.expand_or_jump_forwards(fallback)
