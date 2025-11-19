@@ -52,5 +52,17 @@ return {
     opts = {
       log_level = "DEBUG",
     },
-  }
+  },
+  keys = {
+    {
+      "<leader>cc",
+      "<cmd>CodeCompanionChat<CR>",
+      desc = "Open CodeCompanion Chat"
+    },
+    {
+      "<leader>ca",
+      "<cmd>CodeCompanionActions<CR>",
+      desc = "CodeCompanion Actions"
+    },
+  },
 }

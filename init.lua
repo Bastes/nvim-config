@@ -5,7 +5,7 @@ require("config.lazy")
 vim.opt.cursorline = true
 
 -- leader-c to toggle conceallevel
-vim.keymap.set('n', '<leader>c',
+vim.keymap.set('n', '<leader>clt',
   function()
     if vim.opt.conceallevel:get() == 2 then
       vim.opt.conceallevel = 0
