@@ -1,4 +1,10 @@
--- require("pckr-init")
+-- disable netrw at the very start of your init.lua (for nvim-tree)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
+
 require("config.lazy")
 
 -- do not conceal quotes in json!
