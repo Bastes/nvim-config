@@ -6,10 +6,10 @@ return {
     {
       "<leader>lf",
       function()
-        require("conform").format({ async = true})
+        vim.lsp.buf.format({ async = true})
       end,
       mode = "",
-      desc = "Format buffer",
+      desc = "Format Buffer",
     }
   },
   -- This will provide type hinting with LuaLS
