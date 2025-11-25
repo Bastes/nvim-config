@@ -68,6 +68,13 @@ return {
         }
       }
     },
+    memory = {
+      opts = {
+        chat = {
+          default_memory = "default",
+        },
+      },
+    },
     opts = {
       log_level = "DEBUG",
     },
