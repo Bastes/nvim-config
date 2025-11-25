@@ -20,7 +20,7 @@ return {
     wk.add({"<leader>h", group = "Git"})
     wk.add({"<leader>l", group = "LSP"})
     wk.add({"<leader>n", group = "NeovimTree"})
-    wk.add({"<leader>r", group = "EasyReplace"})
+    wk.add({"<leader>s", group = "Spectre"})
     wk.add({"<leader>t", group = "Tables"})
   end,
 }
