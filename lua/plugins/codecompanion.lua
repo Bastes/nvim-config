@@ -74,9 +74,9 @@ return {
   },
   keys = {
     {
-      "<leader>cc",
-      "<cmd>CodeCompanionChat<CR>",
-      desc = "Open CodeCompanion Chat"
+      "<leader>C",
+      "<cmd>CodeCompanionChat Toggle<CR>",
+      desc = "Toggle CodeCompanion Chat"
     },
     {
       "<leader>ca",
