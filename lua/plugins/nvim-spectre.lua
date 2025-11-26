@@ -10,7 +10,7 @@ return {
         require("spectre").toggle()
       end,
       mode = "n",
-      desc = "Toggle Spectre",
+      desc = "[S]pectre toggle",
     },
     {
       "<leader>sw",

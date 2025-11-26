@@ -8,10 +8,10 @@ return {
     })
 
     -- Raccourcis pour naviguer entre les hunks
-    vim.keymap.set("n", "]h", "<Plug>(GitGutterNextHunk)", { desc = "Next Git Hunk" })
-    vim.keymap.set("n", "[h", "<Plug>(GitGutterPrevHunk)", { desc = "Previous Git Hunk" })
-    vim.keymap.set("n", "<Leader>hp", "<Plug>(GitGutterPreviewHunk)", { desc = "Preview Hunk" })
-    vim.keymap.set("n", "<Leader>hs", "<Plug>(GitGutterStageHunk)", { desc = "Stage Hunk" })
-    vim.keymap.set("n", "<Leader>hu", "<Plug>(GitGutterUndoHunk)", { desc = "Undo Hunk" })
+    vim.keymap.set("n", "]g", "<Plug>(GitGutterNextHunk)", { desc = "Next Git Hunk" })
+    vim.keymap.set("n", "[g", "<Plug>(GitGutterPrevHunk)", { desc = "Previous Git Hunk" })
+    vim.keymap.set("n", "<Leader>gp", "<Plug>(GitGutterPreviewHunk)", { desc = "[p]review hunk" })
+    vim.keymap.set("n", "<Leader>gs", "<Plug>(GitGutterStageHunk)", { desc = "[s]tage hunk" })
+    vim.keymap.set("n", "<Leader>gu", "<Plug>(GitGutterUndoHunk)", { desc = "[u]ndo hunk" })
   end
 }

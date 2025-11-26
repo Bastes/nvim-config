@@ -15,12 +15,11 @@ return {
     local wk = require("which-key")
     wk.setup(opts)
 
-    wk.add({"<leader>c", group = "CodeCompanion"})
-    wk.add({"<leader>f", group = "Find (FzfLua)"})
-    wk.add({"<leader>h", group = "Git"})
-    wk.add({"<leader>l", group = "LSP"})
-    wk.add({"<leader>n", group = "NeovimTree"})
-    wk.add({"<leader>s", group = "Spectre"})
-    wk.add({"<leader>t", group = "Tables"})
+    wk.add({"<leader>c", group = "[c]odeCompanion"})
+    wk.add({"<leader>f", group = "[f]ind (FzfLua)"})
+    wk.add({"<leader>g", group = "[g]it"})
+    wk.add({"<leader>l", group = "[l]sp"})
+    wk.add({"<leader>s", group = "[s]pectre"})
+    wk.add({"<leader>t", group = "[t]ables"})
   end,
 }

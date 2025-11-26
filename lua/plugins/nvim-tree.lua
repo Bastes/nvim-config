@@ -9,6 +9,6 @@ return {
     require("nvim-tree").setup({})
 
     -- Add keybinding to toggle nvim-tree
-    vim.keymap.set("n", "<leader>nt", ":NvimTreeToggle<CR>", { silent = true, desc = "NvimTree Toggle" })
+    vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true, desc = "file [e]xplorer toggle" })
   end,
 }

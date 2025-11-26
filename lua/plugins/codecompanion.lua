@@ -83,7 +83,7 @@ return {
     {
       "<leader>C",
       "<cmd>CodeCompanionChat Toggle<CR>",
-      desc = "Toggle CodeCompanion Chat"
+      desc = "[C]odeCompanion chat toggle"
     },
     {
       "<leader>ca",

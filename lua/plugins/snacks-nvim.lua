@@ -94,6 +94,42 @@ return {
           align = "left",
         },
       },
-    }
-  }
+    },
+    bigfile = {
+      enabled = true,
+      notify = true,
+      size = 1.5 * 1024 * 1024
+    },
+    explorer = { enabled = false },
+    indent = { enabled = true },
+    input = { enabled = false },
+    picker = { enabled = false },
+    notifier = { enabled = false },
+    quickfile = { enabled = false },
+    scope = { enabled = true },
+    scroll = { enabled = false },
+    statuscolumn = { enabled = false },
+    words = { enabled = false },
+  },
+  lazy = false,
+  keys = {
+    {
+      "<leader>d",
+      function()
+        if Snacks.dim.enabled then
+          Snacks.dim.disable()
+        else
+          Snacks.dim.enable()
+        end
+      end,
+      desc = "[d]im toggle"
+    },
+    {
+      "<C-t>",
+      function()
+        Snacks.terminal.toggle()
+      end,
+      desc = "[t]erminal toggle"
+    },
+  },
 }
