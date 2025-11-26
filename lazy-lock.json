@@ -43,7 +43,7 @@
   "vim-css-color": { "branch": "master", "commit": "14fd934cdd9ca1ac0e53511094e612eb9bace373" },
   "vim-endwise": { "branch": "master", "commit": "4994afb0cdf956d9a665a14b9c834869e602c396" },
   "vim-fugitive": { "branch": "master", "commit": "61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4" },
-  "vim-gitgutter": { "branch": "main", "commit": "b9bfd8b9e8190871af0e268ecfd0e47cf15f7b1b" },
+  "vim-gitgutter": { "branch": "main", "commit": "9b2b4bb951be8a32d7df055f655892516a48acb3" },
   "vim-rails": { "branch": "master", "commit": "b0a5c76f86ea214ade36ab0b811e730c3f0add67" },
   "vim-repeat": { "branch": "master", "commit": "65846025c15494983dafe5e3b46c8f88ab2e9635" },
   "vim-rhubarb": { "branch": "master", "commit": "5496d7c94581c4c9ad7430357449bb57fc59f501" },
