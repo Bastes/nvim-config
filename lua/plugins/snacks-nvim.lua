@@ -69,29 +69,29 @@ return {
       sections = {
         { section = "header" },
         {
-          footer = random_pterry_quote(),
+          section = "keys",
+          gap = 0,
+          padding = 2,
+          align = "center",
+        },
+        {
+          text = random_pterry_quote(),
           padding = 2,      -- Optional padding above/below the footer
           align = "center", -- Optional alignment (left, center, right)
           hl = "comment"
         },
         {
           section = "terminal",
+          pane = 2,
           cmd = "cbonsai -l -i -L 30",
           height = 30,
           indent = 0,
           gap = 0,
-          padding = 1
+          padding = 1,
         },
         {
-          section = "startup"
-        },
-        {
-          pane = 3,
-          section = "keys",
-          gap = 0,
-          indent = 5,
-          padding = 0,
-          align = "left",
+          section = "startup",
+          pane = 2,
         },
       },
     },
