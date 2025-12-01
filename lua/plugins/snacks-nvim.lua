@@ -75,7 +75,11 @@ return {
           align = "center",
         },
         {
+          section = "startup",
+        },
+        {
           text = random_pterry_quote(),
+          pane = 2,
           padding = 2,      -- Optional padding above/below the footer
           align = "center", -- Optional alignment (left, center, right)
           hl = "comment"
@@ -88,10 +92,6 @@ return {
           indent = 0,
           gap = 0,
           padding = 1,
-        },
-        {
-          section = "startup",
-          pane = 2,
         },
       },
     },

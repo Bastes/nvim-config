@@ -7,13 +7,13 @@ return {
   opts = {
     strategies = {
       chat = {
-        adapter = "qwen2_5"
+        adapter = "qwen3"
       },
       inline = {
-        adapter = "qwen2_5"
+        adapter = "qwen3"
       },
       cmd = {
-        adapter = "qwen2_5"
+        adapter = "qwen3"
       },
     },
     adapters = {
