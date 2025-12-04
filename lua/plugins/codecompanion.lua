@@ -1,3 +1,38 @@
+local function find_directory_with_parent_check(dir, check_func)
+  local parent_dir = dir
+  while parent_dir ~= "/" do
+    if check_func(parent_dir) then
+      return parent_dir
+    end
+    parent_dir = vim.fn.fnamemodify(parent_dir, ":h")
+  end
+  return nil
+end
+
+local function current_history_dir()
+  local current_dir = vim.fn.getcwd()
+  local project_root = false
+
+  -- First, look for .gitignored/codecompanion-history directory
+  project_root = find_directory_with_parent_check(current_dir, function(parent_dir)
+    return vim.fn.isdirectory(parent_dir .. "/.gitignored/codecompanion-history") == 1
+  end)
+
+  -- If not found, fall back to .git directory
+  if not project_root then
+    project_root = find_directory_with_parent_check(current_dir, function(parent_dir)
+      return vim.fn.isdirectory(parent_dir .. "/.git") == 1
+    end)
+  end
+
+  -- If still not found, use current directory
+  if not project_root then
+    project_root = current_dir
+  end
+
+  return project_root .. "/.gitignored/codecompanion-history"
+end
+
 return {
   "olimorris/codecompanion.nvim",
   dependencies = {
@@ -111,7 +146,7 @@ return {
           ---When chat is cleared with `gx` delete the chat from history
           delete_on_clearing_chat = false,
           -- Directory where the memory files are saved ; experimenting with local saves
-          dir_to_save = vim.fn.getcwd() .. "/.gitignored/codecompanion-history",
+          dir_to_save = current_history_dir(),
           ---Enable detailed logging for history extension
           enable_logging = false,
 
