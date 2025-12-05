@@ -20,13 +20,15 @@ return {
       end, { noremap = true, silent = true, desc = "quick fix (code [a]ction)" })
       vim.keymap.set("n", "<leader>le", vim.diagnostic.open_float, { noremap = true, silent = true, desc = "[e]rror diagnostic" })
       vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, { noremap = true, silent = true, desc = "[h]over" })
+      vim.keymap.set("n", "<leader>li", function()
+        vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+      end, {noremap = true, silent = true, desc = "toggle [i]nlay hints"})
+
       vim.keymap.set("n", "<leader>ls", vim.lsp.buf.document_symbol, { noremap = true, silent = true, desc = "document [s]ymbol" })
       vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references, { noremap = true, silent = true, desc = "find [r]eferences" })
       vim.keymap.set("n", "<leader>lR", vim.lsp.buf.rename, { noremap = true, silent = true, desc = "[R]ename symbol" })
 
       vim.opt.signcolumn = "yes"
-
-      vim.lsp.enable("ruby_lsp")
 
       vim.lsp.config("ruby_lsp", {
         init_options = {
@@ -35,6 +37,24 @@ return {
         capabilities = require('cmp_nvim_lsp').default_capabilities(),
       })
 
+      vim.lsp.enable("ruby_lsp")
+
+      vim.lsp.config("gopls", {
+        capabilities = require('cmp_nvim_lsp').default_capabilities(),
+        settings = {
+          gopls = {
+            hints = {
+              assignVariableTypes = true,
+              compositeLiteralFields = true,
+              compositeLiteralTypes = true,
+              constantValues = true,
+              functionTypeParameters = true,
+              parameterNames = true,
+              rangeVariableTypes = true,
+            },
+          },
+        },
+      })
       vim.lsp.enable("gopls")
     end,
   },
