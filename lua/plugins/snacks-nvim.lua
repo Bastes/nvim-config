@@ -1,5 +1,5 @@
 local function wrap_text(text, width)
-  local lines = {}  -- Store the final wrapped lines
+  local lines = {} -- Store the final wrapped lines
 
   -- Split the string by existing newline characters first
   for paragraph in text:gmatch("([^\n]*)\n?") do
@@ -52,13 +52,12 @@ end
 
 return {
   "folke/snacks.nvim",
-  ---@type snacks.Config
   opts = {
     dashboard = {
       preset = {
         header = [[
-<-. (`-')_  (`-')  _                 (`-')  _     <-. (`-')  
-   \( OO) ) ( OO).-/     .->        _(OO ) (_)       \(OO )_ 
+<-. (`-')_  (`-')  _                 (`-')  _     <-. (`-')
+   \( OO) ) ( OO).-/     .->        _(OO ) (_)       \(OO )_
 ,--./ ,--/ (,------.(`-')----. ,--.(_/,-.\ ,-(`-'),--./  ,-.)
 |   \ |  |  |  .---'( OO).-.  '\   \ / (_/ | ( OO)|   `.'   |
 |  . '|  |)(|  '--. ( _) | |  | \   /   /  |  |  )|  |'.'|  |
