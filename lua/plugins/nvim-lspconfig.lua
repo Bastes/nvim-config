@@ -19,7 +19,7 @@ return {
         desc = "goto [d]efinition"
       })
 
-      vim.keymap.set("n", "<leader>lA", vim.lsp.buf.code_action, {
+      vim.keymap.set({ "n", "v" }, "<leader>lA", vim.lsp.buf.code_action, {
         noremap = true,
         silent = true,
         desc = "code [A]ction"
