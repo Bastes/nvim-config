@@ -38,10 +38,10 @@ return {
         desc = "quick fix (code [a]ction)"
       })
 
-      vim.keymap.set("n", "<leader>le", vim.diagnostic.open_float, {
+      vim.keymap.set("n", "gd", vim.diagnostic.open_float, {
         noremap = true,
         silent = true,
-        desc = "[e]rror diagnostic"
+        desc = "error [d]iagnostic"
       })
 
       vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, {
