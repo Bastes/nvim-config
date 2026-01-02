@@ -53,5 +53,17 @@ return {
         vim.bo.expandtab = true
       end,
     })
+
+    -- Toggle conceallevel between 0 and 2
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "*",
+      callback = function()
+        vim.keymap.set("n", "<leader>lc", function()
+          local current = vim.wo.conceallevel
+          local new = (current == 0) and 2 or 0
+          vim.wo.conceallevel = new
+        end, { silent = true, desc = "Toggle conceallevel" })
+      end,
+    })
   end
 }
