@@ -102,3 +102,13 @@ vim.opt.spelllang = { "en_gb", "fr" }
 
 -- let's disable ex mode, it's a silly place
 vim.keymap.set("n", "Q", "<nop>", { noremap = true, silent = true })
+
+-- nohlsearch on move preserves my tired eyes from all that highlighting
+vim.on_key(function(key)
+  local mode = vim.api.nvim_get_mode().mode
+  if mode == "n" and vim.v.hlsearch == 1 then
+    if key == "\27" or key:match("[hjklwbe%(%)]") then
+      vim.cmd("nohlsearch")
+    end
+  end
+end, vim.api.nvim_create_namespace("auto_nohl"))
