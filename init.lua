@@ -98,4 +98,7 @@ vim.opt.colorcolumn = "80"
 
 -- spelling in english and french
 vim.opt_local.spell = true
-vim.opt.spelllang = {"en_gb", "fr"}
+vim.opt.spelllang = { "en_gb", "fr" }
+
+-- let's disable ex mode, it's a silly place
+vim.keymap.set("n", "Q", "<nop>", { noremap = true, silent = true })
