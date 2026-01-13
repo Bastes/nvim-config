@@ -7,7 +7,21 @@ return {
     FzfLua.setup({
       files = {
         cmd = [[rg --color=never --hidden --files -g "!**/*.{jpg,png,webp}"]]
-      }
+      },
+      actions = {
+        files = {
+          true,
+          ["ctrl-q"] = FzfLua.actions.file_sel_to_qf,
+        },
+        grep = {
+          true,
+          ["ctrl-q"] = FzfLua.actions.file_sel_to_qf,
+        },
+        oldfiles = {
+          true,
+          ["ctrl-q"] = FzfLua.actions.file_sel_to_qf,
+        },
+      },
     })
     FzfLua.register_ui_select()
 
