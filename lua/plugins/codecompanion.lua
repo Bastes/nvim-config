@@ -33,6 +33,19 @@ local function current_history_dir()
   return project_root .. "/.gitignored/codecompanion-history"
 end
 
+local function is_leboncoin_project()
+  local current_dir = vim.fn.getcwd()
+  return vim.startswith(current_dir, vim.fn.expand("~/Projects/LeBonCoin"))
+end
+
+local function get_default_adapter()
+  if is_leboncoin_project() then
+    return "claude_bedrock"
+  else
+    return "qwen3"
+  end
+end
+
 return {
   "olimorris/codecompanion.nvim",
   dependencies = {
@@ -56,13 +69,13 @@ return {
     },
     strategies = {
       chat = {
-        adapter = "qwen3"
+        adapter = get_default_adapter()
       },
       inline = {
-        adapter = "qwen3"
+        adapter = get_default_adapter()
       },
       cmd = {
-        adapter = "qwen3"
+        adapter = get_default_adapter()
       },
     },
     adapters = {
@@ -104,6 +117,11 @@ return {
               },
             },
           })
+        end,
+      },
+      acp = {
+        claude_bedrock = function()
+          return require("adapters.claude_bedrock")
         end,
       },
     },
