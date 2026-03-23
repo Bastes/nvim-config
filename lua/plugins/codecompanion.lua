@@ -42,7 +42,7 @@ local function get_default_adapter()
   if is_leboncoin_project() then
     return "claude_bedrock"
   else
-    return "qwen3"
+    return "qwen3_5"
   end
 end
 
@@ -105,6 +105,25 @@ return {
             schema = {
               model = {
                 default = "qwen3-coder:30b",
+              },
+              num_ctx = {
+                default = 16384,
+              },
+              think = {
+                default = false,
+              },
+              keep_alive = {
+                default = "5m",
+              },
+            },
+          })
+        end,
+        qwen3_5 = function()
+          return require("codecompanion.adapters").extend("ollama", {
+            name = "qwen3_5",
+            schema = {
+              model = {
+                default = "qwen3.5:35b-a3b",
               },
               num_ctx = {
                 default = 16384,
