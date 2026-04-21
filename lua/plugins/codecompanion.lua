@@ -80,44 +80,6 @@ return {
     },
     adapters = {
       http = {
-        qwen2_5 = function()
-          return require("codecompanion.adapters").extend("ollama", {
-            name = "qwen2_5",
-            schema = {
-              model = {
-                default = "qwen2.5-coder:7b",
-              },
-              num_ctx = {
-                default = 16384,
-              },
-              think = {
-                default = false,
-              },
-              keep_alive = {
-                default = "5m",
-              },
-            },
-          })
-        end,
-        qwen3 = function()
-          return require("codecompanion.adapters").extend("ollama", {
-            name = "qwen3",
-            schema = {
-              model = {
-                default = "qwen3-coder:30b",
-              },
-              num_ctx = {
-                default = 16384,
-              },
-              think = {
-                default = false,
-              },
-              keep_alive = {
-                default = "5m",
-              },
-            },
-          })
-        end,
         qwen3_5 = function()
           return require("codecompanion.adapters").extend("ollama", {
             name = "qwen3_5",
