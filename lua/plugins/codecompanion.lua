@@ -123,7 +123,7 @@ return {
             name = "qwen3_5",
             schema = {
               model = {
-                default = "qwen3.5:35b-a3b",
+                default = "qwen3.5:35b-a3b-16384",
               },
               num_ctx = {
                 default = 16384,
