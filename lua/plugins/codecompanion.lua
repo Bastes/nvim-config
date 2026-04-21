@@ -11,7 +11,7 @@ end
 
 local function current_history_dir()
   local current_dir = vim.fn.getcwd()
-  local project_root = false
+  local project_root = nil
 
   -- First, look for .gitignored/codecompanion-history directory
   project_root = find_directory_with_parent_check(current_dir, function(parent_dir)
