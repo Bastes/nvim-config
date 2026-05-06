@@ -50,12 +50,18 @@ return {
         desc = "[h]over"
       })
 
-      vim.keymap.set("n", "<leader>li", function()
+      vim.keymap.set("n", "<leader>lI", function()
         vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
       end, {
         noremap = true,
         silent = true,
-        desc = "toggle [i]nlay hints",
+        desc = "toggle [I]nlay hints",
+      })
+
+      vim.keymap.set("n", "<leader>li", vim.lsp.buf.implementation, {
+        noremap = true,
+        silent = true,
+        desc = "goto [i]mplementation",
       })
 
       vim.keymap.set("n", "<leader>ls", vim.lsp.buf.document_symbol, {
