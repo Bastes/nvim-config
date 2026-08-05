@@ -26,6 +26,29 @@ vim.keymap.set('n', '<leader>clt',
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- custom statuscolumn with directional indicators
+function _G.custom_statuscolumn()
+  local relnum = vim.v.relnum
+  local lnum = vim.v.lnum
+  local curline = vim.fn.line('.')
+  local max_line = vim.fn.line('$')
+  local width = #tostring(max_line)
+
+  if vim.wo.relativenumber then
+    if relnum == 0 then
+      return string.format('=%' .. width .. 'd ', lnum)
+    elseif lnum < curline then
+      return string.format('-%' .. width .. 'd ', relnum)
+    else
+      return string.format('+%' .. width .. 'd ', relnum)
+    end
+  else
+    return string.format('%' .. width .. 'd ', lnum)
+  end
+end
+
+vim.opt.statuscolumn = '%s%{%v:lua._G.custom_statuscolumn()%}'
+
 vim.api.nvim_create_augroup("numbertoggle", { clear = true })
 vim.api.nvim_create_autocmd(
   { "BufEnter", "FocusGained", "InsertLeave" },
