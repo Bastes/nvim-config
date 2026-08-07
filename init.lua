@@ -30,9 +30,15 @@ vim.opt.relativenumber = true
 function _G.custom_statuscolumn()
   local relnum = vim.v.relnum
   local lnum = vim.v.lnum
+  local virtnum = vim.v.virtnum
   local curline = vim.fn.line('.')
   local max_line = vim.fn.line('$')
   local width = #tostring(max_line)
+
+  -- skip wrapped line continuations
+  if virtnum ~= 0 then
+    return string.rep(' ', width + 2)
+  end
 
   if vim.wo.relativenumber then
     if relnum == 0 then
