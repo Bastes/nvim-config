@@ -1,75 +1,91 @@
 -- TODO: check whether to config manually (i.e. to treat functions as paragraphs)
 return {
   'nvim-treesitter/nvim-treesitter-textobjects',
-  requires = 'nvim-treesitter/nvim-treesitter',
+  branch = 'main',
+  dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  init = function()
+    vim.g.no_plugin_maps = true
+  end,
   config = function()
-    require("nvim-treesitter.configs").setup {
-      textobjects = {
-        select = {
-          enable = true,
+    require('nvim-treesitter-textobjects').setup {
+      select = {
+        -- Automatically jump forward to textobj, similar to targets.vim
+        lookahead = true,
 
-          -- Automatically jump forward to textobj, similar to targets.vim
-          lookahead = true,
+        -- You can choose the select mode (default is charwise 'v')
+        selection_modes = {
+          ['@parameter.outer'] = 'v', -- charwise
+          ['@function.outer'] = 'V',  -- linewise
+          ['@class.outer'] = '<c-v>', -- blockwise
+        },
 
-          keymaps = {
-            -- You can use the capture groups defined in textobjects.scm
-            ["af"] = { query = "@function.outer", desc = "Select outer part of a function region" },
-            ["if"] = { query = "@function.inner", desc = "Select inner part of a function region" },
-          },
-          -- You can choose the select mode (default is charwise 'v')
-          --
-          -- Can also be a function which gets passed a table with the keys
-          -- * query_string: eg '@function.inner'
-          -- * method: eg 'v' or 'o'
-          -- and should return the mode ('v', 'V', or '<c-v>') or a table
-          -- mapping query_strings to modes.
-          selection_modes = {
-            ['@parameter.outer'] = 'v', -- charwise
-            ['@function.outer'] = 'V',  -- linewise
-            ['@class.outer'] = '<c-v>', -- blockwise
-          },
-          -- If you set this to `true` (default is `false`) then any textobject is
-          -- extended to include preceding or succeeding whitespace. Succeeding
-          -- whitespace has priority in order to act similarly to eg the built-in
-          -- `ap`.
-          --
-          -- Can also be a function which gets passed a table with the keys
-          -- * query_string: eg '@function.inner'
-          -- * selection_mode: eg 'v'
-          -- and should return true or false
-          include_surrounding_whitespace = true,
-        },
-        move = {
-          enable = true,
-          set_jumps = true, -- whether to set jumps in the jumplist
-          goto_next_start = {
-            ["]f"] = { query = "@function.outer", desc = "Next function start" },
-            ["]]"] = { query = "@block.outer", desc = "Next block start" },
-            ["]o"] = { query = "@loop.*", desc = "Next loop start" },
-          },
-          goto_next_end = {
-            ["]F"] = { query = "@function.outer", desc = "Next function end" },
-            ["]["] = { query = "@block.outer", desc = "Next block end" },
-          },
-          goto_previous_start = {
-            ["[f"] = { query = "@function.outer", desc = "Previous function start" },
-            ["[["] = { query = "@block.outer", desc = "Previous block start" },
-            ["[o"] = { query = "@loop.*", desc = "Previous loop start" },
-          },
-          goto_previous_end = {
-            ["[F"] = { query = "@function.outer", desc = "Previous function end" },
-            ["[]"] = { query = "@block.outer", desc = "Previous block end" },
-          },
-          goto_next = {
-            ["]c"] = { query = "@conditional.outer", desc = "Next conditional limit" },
-            ["]s"] = { query = "@local.scope", query_group = "locals", desc = "Next scope" },
-          },
-          goto_previous = {
-            ["[c"] = { query = "@conditional.outer", desc = "Previous conditional limit" },
-            ["[s"] = { query = "@local.scope", query_group = "locals", desc = "Previous scope" },
-          }
-        },
+        -- If you set this to `true` (default is `false`) then any textobject is
+        -- extended to include preceding or succeeding whitespace. Succeeding
+        -- whitespace has priority in order to act similarly to eg the built-in `ap`.
+        include_surrounding_whitespace = true,
+      },
+      move = {
+        -- whether to set jumps in the jumplist
+        set_jumps = true,
       },
     }
+
+    local select = require 'nvim-treesitter-textobjects.select'
+    local move = require 'nvim-treesitter-textobjects.move'
+
+    vim.keymap.set({ 'x', 'o' }, 'af', function()
+      select.select_textobject('@function.outer', 'textobjects')
+    end, { desc = 'Select outer part of a function region' })
+    vim.keymap.set({ 'x', 'o' }, 'if', function()
+      select.select_textobject('@function.inner', 'textobjects')
+    end, { desc = 'Select inner part of a function region' })
+
+    vim.keymap.set({ 'n', 'x', 'o' }, ']f', function()
+      move.goto_next_start('@function.outer', 'textobjects')
+    end, { desc = 'Next function start' })
+    vim.keymap.set({ 'n', 'x', 'o' }, ']]', function()
+      move.goto_next_start('@block.outer', 'textobjects')
+    end, { desc = 'Next block start' })
+    vim.keymap.set({ 'n', 'x', 'o' }, ']o', function()
+      move.goto_next_start('@loop.*', 'textobjects')
+    end, { desc = 'Next loop start' })
+
+    vim.keymap.set({ 'n', 'x', 'o' }, ']F', function()
+      move.goto_next_end('@function.outer', 'textobjects')
+    end, { desc = 'Next function end' })
+    vim.keymap.set({ 'n', 'x', 'o' }, '][', function()
+      move.goto_next_end('@block.outer', 'textobjects')
+    end, { desc = 'Next block end' })
+
+    vim.keymap.set({ 'n', 'x', 'o' }, '[f', function()
+      move.goto_previous_start('@function.outer', 'textobjects')
+    end, { desc = 'Previous function start' })
+    vim.keymap.set({ 'n', 'x', 'o' }, '[[', function()
+      move.goto_previous_start('@block.outer', 'textobjects')
+    end, { desc = 'Previous block start' })
+    vim.keymap.set({ 'n', 'x', 'o' }, '[o', function()
+      move.goto_previous_start('@loop.*', 'textobjects')
+    end, { desc = 'Previous loop start' })
+
+    vim.keymap.set({ 'n', 'x', 'o' }, '[F', function()
+      move.goto_previous_end('@function.outer', 'textobjects')
+    end, { desc = 'Previous function end' })
+    vim.keymap.set({ 'n', 'x', 'o' }, '[]', function()
+      move.goto_previous_end('@block.outer', 'textobjects')
+    end, { desc = 'Previous block end' })
+
+    vim.keymap.set({ 'n', 'x', 'o' }, ']c', function()
+      move.goto_next('@conditional.outer', 'textobjects')
+    end, { desc = 'Next conditional limit' })
+    vim.keymap.set({ 'n', 'x', 'o' }, ']s', function()
+      move.goto_next('@local.scope', 'locals')
+    end, { desc = 'Next scope' })
+
+    vim.keymap.set({ 'n', 'x', 'o' }, '[c', function()
+      move.goto_previous('@conditional.outer', 'textobjects')
+    end, { desc = 'Previous conditional limit' })
+    vim.keymap.set({ 'n', 'x', 'o' }, '[s', function()
+      move.goto_previous('@local.scope', 'locals')
+    end, { desc = 'Previous scope' })
   end
 }
