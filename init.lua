@@ -49,7 +49,7 @@ function _G.custom_statuscolumn()
       return string.format('+%' .. width .. 'd ', relnum)
     end
   else
-    return string.format('%' .. width .. 'd ', lnum)
+    return string.format('=%' .. width .. 'd ', lnum)
   end
 end
 
