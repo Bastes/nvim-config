@@ -42,7 +42,7 @@ local function get_default_adapter()
   if is_leboncoin_project() then
     return "claude_bedrock"
   else
-    return "qwen3_6"
+    return "qwen3_coder_next"
   end
 end
 
@@ -99,22 +99,11 @@ return {
             },
           })
         end,
-        qwen3_6 = function()
-          return require("codecompanion.adapters").extend("ollama", {
-            name = "qwen3_6",
-            schema = {
-              model = {
-                default = "qwen3.6:35b-a3b-16384",
-              },
-              num_ctx = {
-                default = 16384,
-              },
-              think = {
-                default = false,
-              },
-              keep_alive = {
-                default = "5m",
-              },
+        qwen3_coder_next = function()
+          return require("codecompanion.adapters").extend("openai_compatible", {
+            name = "qwen3_coder_next",
+            env = {
+              url = "http://localhost:8080",
             },
           })
         end,
